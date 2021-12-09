@@ -55,20 +55,24 @@ export default [
     //默认重定向到首页
     {
         path: '/',
-        component: '@/pages/routes/index.tsx',
+        component: '@/pages/index',
         exact: true,
-        title: '首页'
-        // redirect: '/dataWarehouse/dataLead',
+        title: '首页',
+        redirect: '/users',
+        routes: [
+            { 
+                path: '/users', 
+                component: '@/pages/user/index.tsx',
+                exact: true,
+                title: '用户信息' 
+            },
+            { 
+                path: '/foo',
+                component: '@/pages/foo/index.tsx',
+                exact: true,
+                title: 'Foo' 
+            },
+        ]
     },
-    { 
-        path: '/users', 
-        component: '@/pages/routes/user/index.tsx',
-        title: '用户信息' 
-    },
-    { 
-        path: '/foo',
-        component: '@/pages/routes/foo/index.tsx',
-        title: 'Foo' 
-    },
-    ...exceptionRoutes({route: 'error'})
+    // ...exceptionRoutes({route: 'error'})
 ];
