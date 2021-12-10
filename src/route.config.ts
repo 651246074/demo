@@ -58,7 +58,7 @@ export default [
         component: '@/pages/index',
         exact: true,
         title: '首页',
-        redirect: '/users',
+        // redirect: '/users',
         routes: [
             { 
                 path: '/users', 
@@ -72,6 +72,11 @@ export default [
                 exact: true,
                 title: 'Foo' 
             },
+            {
+                path: '/dragDemo',
+                component: '@/pages/drag-demo/index.tsx',
+                exact: true,
+            }
         ]
     },
     // ...exceptionRoutes({route: 'error'})

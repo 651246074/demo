@@ -1,9 +1,11 @@
+import { IRouteComponentProps } from 'umi';
 import styles from './index.less';
 
-export default function IndexPage() {
+export default function IndexPage({children}: IRouteComponentProps) {
   return (
-    <div>
-      <h1 className={styles.title}>Page index</h1>
+    <div className={styles.IndexPage}>
+      <h1 className={styles.title}>首页</h1>
+      {children}
     </div>
   );
 }

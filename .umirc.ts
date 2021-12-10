@@ -5,7 +5,10 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  layout: {},
+  layout:{
+    name: 'Ant Design',
+    locale: true,
+  },
   routes: routes,
   fastRefresh: {},
   mfsu: {},
