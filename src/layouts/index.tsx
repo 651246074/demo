@@ -1,12 +1,6 @@
-import Layout from 'antd/lib/layout/layout';
-
 import { IRouteComponentProps } from 'umi'
-import styles from './indexless';
+import styles from './index.less';
 
-export default function Layout({ children, location, route, history, match }: IRouteComponentProps) {
-  return (
-      <div className={styles.Layout}>
-          {children}
-      </div>
-  )
+export default (props: any) => {
+    return <div style={{ padding: 20 }}>{ props.children }</div>;
 }

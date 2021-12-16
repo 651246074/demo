@@ -19,11 +19,20 @@ export const layout = ({
         {
           path: '/',
           name: '首页',
+          children: [
+            
+          ]
         },
         { path: '/users', name: '用户信息' },
         { path: '/foo', name: 'foo' },
         { path: '/dragDemo', name: '测试拖拽' }
     ],
-    ...initialState?.settings,
+        navTheme: "light",
+        primaryColor: "#1890ff",
+        layout: "mix",
+        contentWidth: "Fluid",
+        fixedHeader: true,
+        fixSiderbar: true,
+        splitMenus: false
   };
 };

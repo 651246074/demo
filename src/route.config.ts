@@ -55,29 +55,27 @@ export default [
     //默认重定向到首页
     {
         path: '/',
-        component: '@/pages/index',
+        component: '@/layouts/index',
         exact: true,
         title: '首页',
-        // redirect: '/users',
-        routes: [
-            { 
-                path: '/users', 
-                component: '@/pages/user/index.tsx',
-                exact: true,
-                title: '用户信息' 
-            },
-            { 
-                path: '/foo',
-                component: '@/pages/foo/index.tsx',
-                exact: true,
-                title: 'Foo' 
-            },
-            {
-                path: '/dragDemo',
-                component: '@/pages/drag-demo/index.tsx',
-                exact: true,
-            }
-        ]
+        redirect: '/users'
     },
+    { 
+        path: '/users', 
+        component: '@/pages/user/index.tsx',
+        exact: true,
+        title: '用户信息' 
+    },
+    { 
+        path: '/foo',
+        component: '@/pages/foo/index.tsx',
+        exact: true,
+        title: 'Foo' 
+    },
+    {
+        path: '/dragDemo',
+        component: '@/pages/drag-demo/index.tsx',
+        exact: true,
+    }
     // ...exceptionRoutes({route: 'error'})
 ];
